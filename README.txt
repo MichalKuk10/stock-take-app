@@ -1,6 +1,5 @@
-Stock Take app for counting inventory in car-store.
+Stock-Take app for counting current inventory in Car-store.
 
-Take stock in the browser by adding  car's ID.
 
 You can also do bulk updates of your inventory by searching for a product and manually entering the quantity.
 
