@@ -1,14 +1,7 @@
 
-DROP TABLE car;
 
-CREATE TABLE car(id serial PRIMARY KEY,
-                    brand_name VARCHAR ( 50 )  NOT NULL,
-                    car_id INT NOT NULL,
-                 	rent VARCHAR ( 50 ) NOT NULL,
-                 	service VARCHAR ( 55 ) NOT NULL,
-                 	fuel INT NOT NULL);
 
-INSERT INTO car (id, brand_name, car_id, rent, service, fuel) VALUES (default, 'Toyota', 12, 'YES', 'NO', 67);
-INSERT INTO car (id, brand_name, car_id, rent, service, fuel) VALUES (default, 'Mercedes', 1190, 'YES', 'NO', 67);
-INSERT INTO car (id, brand_name, car_id, rent, service, fuel) VALUES (default, 'Toyota', 9910, 'YES', 'NO', 67);
+INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Toyota', 12, 'YES', 'NO', 67);
+INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Mercedes', 1190, 'YES', 'NO', 67);
+INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Toyota', 9910, 'YES', 'NO', 67);
 

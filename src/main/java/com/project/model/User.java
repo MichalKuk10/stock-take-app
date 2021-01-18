@@ -3,15 +3,27 @@ package com.project.model;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.*;
+
+@Entity
 @Getter
 @Setter
+@Table(name = "app_user")
 public class User {
 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name= "id")
     private Long id;
+    @Column(name= "first_name")
     private String firstName;
+    @Column(name= "last_name")
     private String lastName;
+    @Column(name= "address")
     private String address;
+    @Column(name= "password")
     private String password;
+    @Column(name= "email")
     private String email;
 
     public static final class Builder {
