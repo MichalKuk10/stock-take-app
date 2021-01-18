@@ -19,6 +19,9 @@ public class Admin {
     private String firstName;
     @Column(name= "last_name")
     private String lastName;
+    @Enumerated(EnumType.STRING)
+    @Column(length = 10)
+    private Gender gender;
     @Column(name= "address")
     private String address;
     @Column(name= "password")
