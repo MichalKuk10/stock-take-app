@@ -10,9 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class CarService {
-    @Autowired
-   public CarRepository carRepository;
 
+   public CarRepository carRepository;
 
     public CarService() {
     }

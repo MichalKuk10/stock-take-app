@@ -14,7 +14,7 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name= "id")
-    int id;
+    Long id;
     @Column(name= "manufacturer")
     String brandName;
     @Column(name= "car_id")
@@ -26,11 +26,52 @@ public class Car {
     @Column(name= "fuel")
     int fuel;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getBrandName() {
+        return brandName;
+    }
+
+    public void setBrandName(String brandName) {
+        this.brandName = brandName;
+    }
+
+    public String getCarId() {
+        return carId;
+    }
+
+    public void setCarId(String carId) {
+        this.carId = carId;
+    }
+
+    public String getRent() {
+        return rent;
+    }
+
+    public void setRent(String rent) {
+        this.rent = rent;
+    }
+
+    public String getService() {
+        return service;
+    }
+
+    public void setService(String service) {
+        this.service = service;
+    }
+
+    public int getFuel() {
+        return fuel;
+    }
+
+    public void setFuel(int fuel) {
+        this.fuel = fuel;
+    }
 }
 
-//    CREATE TABLE Car(user_id serial PRIMARY KEY,
-//    brand_name VARCHAR ( 50 ) UNIQUE NOT NULL,
-//    car_id INT NOT NULL,
-//    rent VARCHAR ( 50 ) NOT NULL,
-//    service VARCHAR ( 55 ) UNIQUE NOT NULL,
-//    fuel INT NOT NULL);
