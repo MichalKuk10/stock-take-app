@@ -1,14 +1,12 @@
 
-DROP TABLE car;
 
-CREATE TABLE car(id serial PRIMARY KEY,
-                    brand_name VARCHAR ( 50 )  NOT NULL,
-                    car_id INT NOT NULL,
-                 	rent VARCHAR ( 50 ) NOT NULL,
-                 	service VARCHAR ( 55 ) NOT NULL,
-                 	fuel INT NOT NULL);
 
-INSERT INTO car (id, brand_name, car_id, rent, service, fuel) VALUES (default, 'Toyota', 12, 'YES', 'NO', 67);
-INSERT INTO car (id, brand_name, car_id, rent, service, fuel) VALUES (default, 'Mercedes', 1190, 'YES', 'NO', 67);
-INSERT INTO car (id, brand_name, car_id, rent, service, fuel) VALUES (default, 'Toyota', 9910, 'YES', 'NO', 67);
+INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Toyota', 12, 'YES', 'NO', 67);
+INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Mercedes', 1190, 'YES', 'NO', 67);
+INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Toyota', 9910, 'YES', 'NO', 67);
 
+INSERT INTO admin (id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Maciek', 'Kowalski', 'MALE', 'Kraków', 'haslo123', 'maciek@gmail.com');
+
+
+INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Joanna', 'Nowak', 'FEMALE', 'Kraków', 'haslo123', 'asia@gmail.com');
+INSERT INTO reservation (id, start_date, end_date, car_id, user_id, total_price) VALUES (default, '01-15-2021', '01-16-2021', '2', '1', 100);

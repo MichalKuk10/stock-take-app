@@ -15,7 +15,7 @@ public class Car {
     @Id
     @Column(name= "id")
     int id;
-    @Column(name= "brand_name")
+    @Column(name= "manufacturer")
     String brandName;
     @Column(name= "car_id")
     String carId;
