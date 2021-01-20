@@ -1,10 +1,9 @@
 package com.project.dao;
 
-import com.project.model.Car;
+import com.project.model.Reservation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CarRepository extends JpaRepository<Car, Long> {
-
+public interface ReservationRepo extends JpaRepository<Reservation, Long> {
 }
