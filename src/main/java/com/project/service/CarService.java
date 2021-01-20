@@ -1,6 +1,7 @@
 package com.project.service;
 
 //import com.project.dao.CarRepository;
+import com.project.converter.CarDTOConverter;
 import com.project.dao.CarRepository;
 import com.project.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,8 @@ public class CarService {
 
    public CarRepository carRepository;
 
-    public CarService() {
+    public CarService(CarRepository carRepository) {
+        this.carRepository = carRepository;
     }
 
     public List<Car> getAllCars(){

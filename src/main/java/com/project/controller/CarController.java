@@ -1,7 +1,7 @@
 package com.project.controller;
 
 import com.project.converter.CarDTOConverter;
-import com.project.model.Car;
+import com.project.modelDTO.CarDTO;
 import com.project.service.CarService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,13 +28,14 @@ public class CarController {
 
     @GetMapping
     @ResponseBody
-    public List<Car> getAllCars(){
-        return carService.getAllCars();
+    public List<CarDTO> getAllCars(){
+
+        return carDTOConverter.entitiesToDTO(carService.getAllCars());
     }
 
-    @GetMapping("{/id}")
-    @ResponseBody
-    public List<Car> getCarById(){
-        return carService.getAllCars();
-    }
+//    @GetMapping("{/id}")
+//    @ResponseBody
+//    public List<CarDTO> getCarById(){
+//        return carService.getAllCars()
+//    }
 }

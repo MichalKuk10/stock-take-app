@@ -4,6 +4,9 @@ import com.project.model.Car;
 import com.project.modelDTO.CarDTO;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class CarDTOConverter {
 
@@ -31,6 +34,13 @@ public class CarDTOConverter {
         car.setService(carDTO.getService());
 
         return car;
+    }
+
+
+    public List<CarDTO> entitiesToDTO(List<Car> cars) {
+        return cars.stream()
+                .map(car -> convertEntityToDTO(car))
+                .collect(Collectors.toList());
     }
 
 
