@@ -65,7 +65,7 @@
                 <configuration>
                     <appName>jenkins-spring-example</appName>
                     <processTypes>
-                        <web>java -jar -Dserver.port=$PORT target/${project.build.finalName}.jar</web>
+                        <web>java -jar -Dserver.port=$PORT $JAVA_OPTS -jar target/demo-0.0.1-SNAPSHOT.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
