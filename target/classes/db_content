@@ -1,9 +1,9 @@
 
 
 
-INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Toyota', 12, 'YES', 'NO', 67);
-INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Mercedes', 1190, 'YES', 'NO', 67);
-INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Toyota', 9910, 'YES', 'NO', 67);
+INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Toyota', 'KR 12345', 'YES', 'NO', 67);
+INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Mercedes', 'KR 23456', 'YES', 'NO', 67);
+INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Toyota', 'KR 34567', 'YES', 'NO', 67);
 
 INSERT INTO admin (id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Maciek', 'Kowalski', 'MALE', 'Kraków', 'haslo123', 'maciek@gmail.com');
 

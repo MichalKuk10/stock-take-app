@@ -16,6 +16,7 @@ public class CarDTOConverter {
 
         carDTO.setId(car.getId());
         carDTO.setBrandName(car.getBrandName());
+        carDTO.setCarId(car.getCarId());
         carDTO.setRent(car.getRent());
         carDTO.setService(car.getService());
         carDTO.setFuel(car.getFuel());
@@ -29,6 +30,7 @@ public class CarDTOConverter {
 
         car.setCarId(carDTO.getCarId());
         car.setBrandName(carDTO.getBrandName());
+        car.setCarId(carDTO.getCarId());
         car.setRent(carDTO.getRent());
         car.setFuel(carDTO.getFuel());
         car.setService(carDTO.getService());
