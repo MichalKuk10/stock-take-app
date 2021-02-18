@@ -29,6 +29,8 @@ public class User {
     @Column(name= "email")
     private String email;
 
+
+
     public static final class Builder {
         private Long id;
         private String firstName;
