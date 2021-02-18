@@ -6,10 +6,10 @@ import lombok.Setter;
 @Setter
 @Getter
 public class ReservationDTO {
-    int id;
+    Long id;
     String startDate;
     String endDate;
-    int carId;
-    int renterId;
+    Long carId;
+    Long renterId;
     int price;
 }
