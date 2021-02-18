@@ -14,7 +14,7 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name= "id")
-    int id;
+    Long id;
     @Column(name= "start_date", unique = false, nullable = false, length = 100)
     String startDate;
     @Column(name= "end_date", unique = false, nullable = false, length = 100)
@@ -27,6 +27,6 @@ public class Reservation {
     private Car car;
 
     @OneToOne(optional=false)
-    @JoinColumn(name="user_id", referencedColumnName="app_user_id", insertable=false, updatable=false)
+    @JoinColumn(name="user_id", unique = false, referencedColumnName="app_user_id", insertable=false, updatable=false)
     private User user;
 }
