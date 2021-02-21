@@ -9,7 +9,13 @@ INSERT INTO admin (id, first_name, last_name, Gender, address, password, email) 
 
 
 INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Joanna', 'Nowak', 'FEMALE', 'Kraków', 'haslo123', 'asia@gmail.com');
-INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Marcin', 'Kowalski', 'MALE', 'Kraków', 'haslo123', 'Marcin@gmail.com');
+INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Marcin', 'Kowalski', 'MALE', 'Kraków', 'haslo123', 'mar@gmail.com');
+INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Kuba', 'Nieznajomy', 'MALE', 'Warszawa', 'haslo123', 'jakub@gmail.com');
+INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Marta', 'Solidarna', 'FEMALE', 'Kraków', 'haslo123', 'marta@gmail.com');
+INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Maciej', 'Nowogrodzki', 'MALE', 'Wroclaw', 'haslo123', 'maciej@gmail.com');
+
+
+
 
 INSERT INTO reservation (id, start_date, end_date, car_id, user_id, total_price) VALUES (default, '01-15-2021', '01-16-2021', '2', '1', 100);
 INSERT INTO reservation (id, start_date, end_date, car_id, user_id, total_price) VALUES (default, '02-10-2021', '02-16-2021', '2', '2', 12);
