@@ -2,6 +2,8 @@ package com.project.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 
@@ -26,7 +28,8 @@ public class Reservation {
     @JoinColumn(name = "car_id")
     private Car car;
 
-    @OneToOne(optional=false)
+    @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name="user_id", unique = false, referencedColumnName="app_user_id", insertable=false, updatable=false)
     private User user;
 }

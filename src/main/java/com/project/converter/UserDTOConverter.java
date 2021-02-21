@@ -22,7 +22,7 @@ public class UserDTOConverter {
         userDTO.setLastName(user.getLastName());
         userDTO.setAddress(user.getAddress());
         userDTO.setEmail(user.getEmail());
-        userDTO.setPassword("*****");
+        userDTO.setPassword("**********");
 
         return userDTO;
 
