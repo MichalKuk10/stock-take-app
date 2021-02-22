@@ -31,9 +31,19 @@ public class CarController {
     }
 
     @GetMapping
+    @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
     @ResponseBody
     public List<CarDTO> getAllCars(){
         return carDTOConverter.entitiesToDTO(carService.getAllCars());
+    }
+
+    @GetMapping
+    @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+    @RequestMapping("/ids")
+    @ResponseBody
+    public List<String> getAllCarsIds(){
+        return carService.getCarsIds();
+
     }
 
     @DeleteMapping("/{id}")

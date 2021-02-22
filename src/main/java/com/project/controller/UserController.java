@@ -30,6 +30,7 @@ public class UserController {
     }
 
     @GetMapping
+    @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
     @ResponseBody
     public List<UserDTO> getAllUsers(){
         return userDTOConverter.entitiesToDTO(userService.getAllUsers());
