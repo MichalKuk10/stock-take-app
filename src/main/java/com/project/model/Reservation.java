@@ -25,6 +25,7 @@ public class Reservation {
     int price;
 
     @OneToOne(fetch = FetchType.LAZY)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "car_id")
     private Car car;
 
