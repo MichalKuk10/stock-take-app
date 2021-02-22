@@ -20,4 +20,9 @@ public class CarService {
       return carRepo.findAll();
 
     }
+
+    public void deleteCar(long id){
+        carRepo.deleteById(id);
+    }
+
 }

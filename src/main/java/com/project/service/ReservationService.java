@@ -21,4 +21,8 @@ public class ReservationService {
         return reservationRepo.findAll();
 
     }
+
+    public void deleteReservation(long id){
+        reservationRepo.deleteById(id);
+    }
 }
