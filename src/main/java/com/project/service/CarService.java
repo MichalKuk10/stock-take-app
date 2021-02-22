@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class CarService {
 
@@ -27,6 +29,12 @@ public class CarService {
 
     public void addCar(Car car){
         carRepo.save(car);
+    }
+
+    public List<String> getCarsIds(){
+        return carRepo.findAll().stream()
+                .map(car -> car.getCarId())
+                .collect(Collectors.toList());
     }
 
 }
