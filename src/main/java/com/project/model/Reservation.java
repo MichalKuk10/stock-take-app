@@ -24,12 +24,12 @@ public class Reservation {
     @Column(name= "total_price")
     int price;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "car_id")
     private Car car;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name="user_id", unique = false, referencedColumnName="app_user_id", insertable=false, updatable=false)
     private User user;

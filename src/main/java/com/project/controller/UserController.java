@@ -2,6 +2,7 @@ package com.project.controller;
 
 
 import com.project.converter.UserDTOConverter;
+import com.project.model.User;
 import com.project.modelDTO.UserDTO;
 import com.project.service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static org.springframework.http.HttpStatus.NO_CONTENT;
+import static org.springframework.http.HttpStatus.*;
+import static org.springframework.http.HttpStatus.CREATED;
 
 @Controller
 @RestController
@@ -43,4 +45,14 @@ public class UserController {
 
         return ResponseEntity.ok().build();
     }
+
+    @PostMapping()
+    @ResponseBody
+    @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+    @ResponseStatus(CREATED)
+    public ResponseEntity<Object> attemptToAddUser(@RequestBody User user) {
+            userService.addUser(user);
+            return ResponseEntity.status(CREATED).body("Account has been created.");
+        }
 }
+
