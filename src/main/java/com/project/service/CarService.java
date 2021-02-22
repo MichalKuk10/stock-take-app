@@ -25,4 +25,8 @@ public class CarService {
         carRepo.deleteById(id);
     }
 
+    public void addCar(Car car){
+        carRepo.save(car);
+    }
+
 }
