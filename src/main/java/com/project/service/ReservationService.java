@@ -19,7 +19,13 @@ public class ReservationService {
 
     public List<Reservation> getAllReservations(){
         return reservationRepo.findAll();
+    }
+    public List<Reservation> getReservationsByIds(List<Long> ids){
+        return reservationRepo.findAllById(ids);
+    }
 
+    public List<Reservation> getReservationsByCarId(Long id){
+        return reservationRepo.findReservationsByCarId(id);
     }
 
     public void deleteReservation(long id){

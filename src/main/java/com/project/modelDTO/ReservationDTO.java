@@ -1,5 +1,7 @@
 package com.project.modelDTO;
 
+import com.project.model.Car;
+import com.project.model.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,5 +13,5 @@ public class ReservationDTO {
     String endDate;
     Long carId;
     Long renterId;
-    int price;
+    int reservationLengthInHours;
 }

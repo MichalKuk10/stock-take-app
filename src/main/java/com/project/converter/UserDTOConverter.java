@@ -12,17 +12,18 @@ import java.util.stream.Collectors;
 @Component
 public class UserDTOConverter {
 
-
-
     public UserDTO convertEntityToDTO(User user){
         UserDTO userDTO = new UserDTO();
 
         userDTO.setId(user.getId());
         userDTO.setFirstName(user.getFirstName());
         userDTO.setLastName(user.getLastName());
+        userDTO.setGender(user.getGender());
         userDTO.setAddress(user.getAddress());
         userDTO.setEmail(user.getEmail());
         userDTO.setPassword("**********");
+        userDTO.setIsAdmin(user.getIsAdmin());
+        userDTO.setReservations(user.getReservations());
 
         return userDTO;
 

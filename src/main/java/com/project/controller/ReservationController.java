@@ -14,7 +14,7 @@ import static org.springframework.http.HttpStatus.NO_CONTENT;
 @Controller
 @RestController
 @RequestMapping("/api/reservations")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 public class ReservationController {
 
 
@@ -29,9 +29,16 @@ public class ReservationController {
     @GetMapping
     @ResponseBody
     public List<ReservationDTO> getAllCars(){
-
         return reservationDTOConverter.entitiesToDTO(reservationService.getAllReservations());
     }
+
+    @GetMapping(params="car")
+    @ResponseBody
+    public List<ReservationDTO> getReservationsByCarId(@RequestParam(value="car") long id){
+        return reservationDTOConverter.entitiesToDTO(reservationService.getReservationsByCarId(id));
+    }
+
+
 
     @DeleteMapping("/{id}")
     @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
