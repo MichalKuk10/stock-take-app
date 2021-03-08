@@ -4,9 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import org.springframework.data.relational.core.sql.In;
 
 import javax.persistence.*;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Entity
 @Getter
@@ -32,6 +36,8 @@ public class Reservation {
     public Long getId(){
         return id;
     }
+
+
     
     public static final class Builder {
         private Long id;
@@ -66,4 +72,7 @@ public class Reservation {
             return this;
         }
     }
+
+
+
 }
