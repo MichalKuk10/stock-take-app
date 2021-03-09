@@ -1,6 +1,7 @@
 package Java;
 
 import com.project.dao.UserRepo;
+import com.project.exception.MyCustomException;
 import com.project.model.User;
 import com.project.service.UserService;
 import org.junit.jupiter.api.Assertions;
@@ -9,9 +10,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+
 import java.util.Arrays;
 import java.util.List;
-
 
 import static org.mockito.BDDMockito.given;
 
@@ -45,8 +46,19 @@ class UserServiceTest {
 
     @Test
     public void should_check_if_null(){
+
         Assertions.assertTrue(true);
     }
+
+    @Test
+    public void should_check_if_my_custom_exception_is_thrown_when_try_to_delete_user(){
+
+        Assertions.assertThrows(MyCustomException.class, () -> {
+            userService.deleteUser(0);
+        });
+
+    }
+
 
 
 
