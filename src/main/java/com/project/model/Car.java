@@ -2,29 +2,36 @@ package com.project.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Formula;
+
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "car")
+@Table(name = "cars")
 public class Car {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name= "id")
+    @Column(name= "car_id")
     Long id;
     @Column(name= "manufacturer")
-    String brandName;
-    @Column(name= "car_id")
-    String carId;
-    @Column(name= "rent")
-    String rent;
-    @Column(name= "service")
-    String service;
-    @Column(name= "fuel")
-    int fuel;
+    String manufacturer;
+    @Column(name= "model")
+    String model;   
+    @Column(name= "registration")
+    String registration;
+    @Column(name= "is_service_required")
+    boolean isServiceRequired;
+    @Column(name= "tank_percentage")
+    int tankPercentage;
+    @Column(name= "price_per_hour")
+    int pricePerHour;
+    @OneToMany(mappedBy="car", cascade= CascadeType.ALL)
+    List<Reservation> reservations;
 
     public Long getId() {
         return id;
@@ -34,44 +41,55 @@ public class Car {
         this.id = id;
     }
 
-    public String getBrandName() {
-        return brandName;
+    public String getManufacturer() {
+        return manufacturer;
     }
 
-    public void setBrandName(String brandName) {
-        this.brandName = brandName;
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+    public String getModel() {
+        return model;
     }
 
-    public String getCarId() {
-        return carId;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public String getRegistration() {
+        return registration;
     }
 
-    public String getRent() {
-        return rent;
+    public void setRegistration(String registration) {
+        this.registration = registration;
     }
 
-    public void setRent(String rent) {
-        this.rent = rent;
+    public List<Reservation> getReservations() {
+        return reservations;
     }
 
-    public String getService() {
-        return service;
+    public void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
     }
 
-    public void setService(String service) {
-        this.service = service;
+    public boolean getIsServiceRequired() {
+        return isServiceRequired;
     }
 
-    public int getFuel() {
-        return fuel;
+    public void setIsServiceRequired(boolean isServiceRequired) {
+        this.isServiceRequired = isServiceRequired;
     }
 
-    public void setFuel(int fuel) {
-        this.fuel = fuel;
+    public int getTankPercentage() {
+        return tankPercentage;
+    }
+
+    public void setTankPercentage(int tankPercentage) {
+        this.tankPercentage = tankPercentage;
+    }
+
+    public int getPricePerHour() {
+        return pricePerHour;
     }
 }
 

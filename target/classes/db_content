@@ -1,24 +1,15 @@
+INSERT INTO cars (car_id, manufacturer, model, registration, is_service_required, tank_percentage, price_per_hour) VALUES (default, 'Toyota', 'Yaris', 'KR 12345', False, 50, 20);
+INSERT INTO cars (car_id, manufacturer, model, registration, is_service_required, tank_percentage, price_per_hour) VALUES (default, 'Mercedes', 'C-Class', 'KR 23456', True, 50 , 50);
+INSERT INTO cars (car_id, manufacturer, model, registration, is_service_required, tank_percentage, price_per_hour) VALUES (default, 'Toyota', 'Corolla', 'KR 34567', False, 50, 30);
 
+INSERT INTO users (user_id, first_name, last_name, gender, address, password, email, is_admin) VALUES (default, 'Joanna', 'Nowak', 'FEMALE', 'Kraków', 'haslo123', 'asia@gmail.com', False);
+INSERT INTO users (user_id, first_name, last_name, gender, address, password, email, is_admin) VALUES (default, 'Marcin', 'Kowalski', 'MALE', 'Kraków', 'haslo123', 'mar@gmail.com', False);
+INSERT INTO users (user_id, first_name, last_name, gender, address, password, email, is_admin) VALUES (default, 'Kuba', 'Nieznajomy', 'MALE', 'Warszawa', 'haslo123', 'jakub@gmail.com', False);
+INSERT INTO users (user_id, first_name, last_name, gender, address, password, email, is_admin) VALUES (default, 'Marta', 'Solidarna', 'FEMALE', 'Kraków', 'haslo123', 'marta@gmail.com', False);
+INSERT INTO users (user_id, first_name, last_name, gender, address, password, email, is_admin) VALUES (default, 'Maciej', 'Nowogrodzki', 'MALE', 'Wroclaw', 'haslo123', 'maciej@gmail.com', False);
 
-
-INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Toyota', 'KR 12345', 'YES', 'NO', 67);
-INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Mercedes', 'KR 23456', 'YES', 'NO', 67);
-INSERT INTO car (id, manufacturer, car_id, rent, service, fuel) VALUES (default, 'Toyota', 'KR 34567', 'YES', 'NO', 67);
-
-INSERT INTO admin (id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Maciek', 'Kowalski', 'MALE', 'Kraków', 'haslo123', 'maciek@gmail.com');
-
-
-INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Joanna', 'Nowak', 'FEMALE', 'Kraków', 'haslo123', 'asia@gmail.com');
-INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Marcin', 'Kowalski', 'MALE', 'Kraków', 'haslo123', 'mar@gmail.com');
-INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Kuba', 'Nieznajomy', 'MALE', 'Warszawa', 'haslo123', 'jakub@gmail.com');
-INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Marta', 'Solidarna', 'FEMALE', 'Kraków', 'haslo123', 'marta@gmail.com');
-INSERT INTO app_user (app_user_id, first_name, last_name, Gender, address, password, email) VALUES (default, 'Maciej', 'Nowogrodzki', 'MALE', 'Wroclaw', 'haslo123', 'maciej@gmail.com');
-
-
-
-
-INSERT INTO reservation (id, start_date, end_date, car_id, user_id, total_price) VALUES (default, '01-15-2021', '01-16-2021', '2', '1', 100);
-INSERT INTO reservation (id, start_date, end_date, car_id, user_id, total_price) VALUES (default, '02-10-2021', '02-16-2021', '2', '2', 12);
-INSERT INTO reservation (id, start_date, end_date, car_id, user_id, total_price) VALUES (default, '02-10-2021', '02-16-2021', '1', '3', 55);
-INSERT INTO reservation (id, start_date, end_date, car_id, user_id, total_price) VALUES (default, '02-10-2021', '02-16-2021', '3', '1', 61);
-INSERT INTO reservation (id, start_date, end_date, car_id, user_id, total_price) VALUES (default, '02-10-2021', '02-16-2021', '3', '4', 12);
+INSERT INTO reservations (reservation_id, start_date, end_date, car_car_id, user_user_id, reservation_length_in_hours) VALUES (default, '01-15-2021', '01-16-2021', '1', '1', 100);
+INSERT INTO reservations (reservation_id, start_date, end_date, car_car_id, user_user_id, reservation_length_in_hours) VALUES (default, '02-10-2021', '02-16-2021', '2', '2', 12);
+INSERT INTO reservations (reservation_id, start_date, end_date, car_car_id, user_user_id, reservation_length_in_hours) VALUES (default, '02-10-2021', '02-16-2021', '1', '1', 55);
+INSERT INTO reservations (reservation_id, start_date, end_date, car_car_id, user_user_id, reservation_length_in_hours) VALUES (default, '02-10-2021', '02-16-2021', '1', '1', 61);
+INSERT INTO reservations (reservation_id, start_date, end_date, car_car_id, user_user_id, reservation_length_in_hours) VALUES (default, '02-10-2021', '02-16-2021', '1', '1', 12);

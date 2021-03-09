@@ -1,15 +1,48 @@
 package com.project.modelDTO;
 
+import com.project.model.Reservation;
+
 import javax.persistence.Column;
+import java.util.List;
 
 public class CarDTO {
 
     private Long id;
-    private String brandName;
-    private String carId;
-    private String rent;
-    private String service;
-    private int fuel;
+    private String manufacturer;
+    private String model;
+    private String registration;
+    private List<Long> reservationsIds;
+    private boolean isServiceRequired;
+    private int tankPercentage;
+    private int pricePerHour;
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public boolean isServiceRequired() {
+        return isServiceRequired;
+    }
+
+    public void setServiceRequired(boolean serviceRequired) {
+        isServiceRequired = serviceRequired;
+    }
+
+    public int getPricePerHour() {
+        return pricePerHour;
+    }
+
+    public void setPricePerHour(int pricePerHour) {
+        this.pricePerHour = pricePerHour;
+    }
+
+    private int pricePerHour(){
+        return pricePerHour;
+    }
 
     public Long getId() {
         return id;
@@ -19,43 +52,42 @@ public class CarDTO {
         this.id = id;
     }
 
-    public String getBrandName() {
-        return brandName;
+    public String getManufacturer() {
+        return manufacturer;
     }
 
-    public void setBrandName(String brandName) {
-        this.brandName = brandName;
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
-    public String getCarId() {
-        return carId;
+    public String getRegistration() {
+        return registration;
     }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public void setRegistration(String registration) {
+        this.registration = registration;
     }
 
-    public String getRent() {
-        return rent;
+    public List<Long> getReservationsIds() {
+        return reservationsIds;
     }
 
-    public void setRent(String rent) {
-        this.rent = rent;
+    public void setReservationsIds(List<Long> reservationsIds) {this.reservationsIds = reservationsIds;}
+
+    public boolean getIsServiceRequired() {
+        return isServiceRequired;
     }
 
-    public String getService() {
-        return service;
+    public void setIsServiceRequired(boolean isServiceRequired) {
+        this.isServiceRequired = isServiceRequired;
     }
 
-    public void setService(String service) {
-        this.service = service;
+    public int getTankPercentage() {
+        return tankPercentage;
     }
 
-    public int getFuel() {
-        return fuel;
+    public void setTankPercentage(int tankPercentage) {
+        this.tankPercentage = tankPercentage;
     }
 
-    public void setFuel(int fuel) {
-        this.fuel = fuel;
-    }
 }

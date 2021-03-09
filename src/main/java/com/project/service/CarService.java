@@ -18,22 +18,25 @@ public class CarService {
         this.carRepo = carRepo;
     }
 
-    public List<Car> getAllCars(){
-      return carRepo.findAll();
-
-    }
+    public List<Car> getAllCars(){return carRepo.findAll();}
 
     public void deleteCar(long id){
         carRepo.deleteById(id);
     }
 
+    public Car getCarById(long id) { return carRepo.getItemById(id); }
+
     public void addCar(Car car){
+        carRepo.save(car);
+    }
+
+    public void updateCar(Car car){
         carRepo.save(car);
     }
 
     public List<String> getCarsIds(){
         return carRepo.findAll().stream()
-                .map(car -> car.getCarId())
+                .map(car -> car.getRegistration())
                 .collect(Collectors.toList());
     }
 

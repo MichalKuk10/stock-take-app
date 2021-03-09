@@ -20,7 +20,7 @@ public class ReservationDTOConverter {
         reservationDTO.setRenterId(reservation.getUser().getId());
         reservationDTO.setStartDate(reservation.getStartDate());
         reservationDTO.setEndDate(reservation.getEndDate());
-        reservationDTO.setPrice(reservation.getPrice());
+        reservationDTO.setReservationLengthInHours(reservation.getReservationLengthInHours());
 
         return reservationDTO;
 
