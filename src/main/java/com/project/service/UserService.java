@@ -42,8 +42,8 @@ public class UserService {
         userRepo.save(existingUser);
     }
 
-    private User getUserById(long id) {
-        return userRepo.getOne(id);
+    public User getUserById(long id) {
+        return userRepo.getUserById(id);
     }
 
 }

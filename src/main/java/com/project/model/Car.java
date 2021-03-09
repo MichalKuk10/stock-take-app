@@ -33,6 +33,20 @@ public class Car {
     @OneToMany(mappedBy="car", cascade= CascadeType.ALL)
     List<Reservation> reservations;
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                ", registration='" + registration + '\'' +
+                ", isServiceRequired=" + isServiceRequired +
+                ", tankPercentage=" + tankPercentage +
+                ", pricePerHour=" + pricePerHour +
+                ", reservations=" + reservations +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }
