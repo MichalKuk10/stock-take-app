@@ -4,6 +4,7 @@ import com.project.model.Reservation;
 import com.project.model.User;
 import com.project.modelDTO.ReservationDTO;
 import com.project.modelDTO.UserDTO;
+import com.project.service.ReservationService;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -11,6 +12,9 @@ import java.util.stream.Collectors;
 
 @Component
 public class UserDTOConverter {
+
+    private ReservationService reservationService;
+    private ReservationDTOConverter reservationDTOConverter;
 
     public UserDTO convertEntityToDTO(User user){
         UserDTO userDTO = new UserDTO();
@@ -23,7 +27,10 @@ public class UserDTOConverter {
         userDTO.setEmail(user.getEmail());
         userDTO.setPassword("**********");
         userDTO.setIsAdmin(user.getIsAdmin());
-        userDTO.setReservations(user.getReservations());
+        userDTO.setReservationsIds(user.getReservations()
+                .stream()
+                .map(Reservation::getId)
+                .collect(Collectors.toList()));
 
         return userDTO;
 

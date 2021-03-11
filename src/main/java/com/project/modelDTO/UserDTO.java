@@ -19,7 +19,7 @@ public class UserDTO {
     private String password;
     private String email;
     private boolean isAdmin;
-    private List<Reservation> reservations;
+    private List<Long> reservationsIds;
 
     public Long getId() {
         return id;
@@ -85,12 +85,12 @@ public class UserDTO {
         isAdmin = admin;
     }
 
-    public List<Reservation> getReservations() {
-        return reservations;
+    public List<Long> getReservationsIds() {
+        return reservationsIds;
     }
 
-    public void setReservations(List<Reservation> reservations) {
-        this.reservations = reservations;
+    public void setReservationsIds(List<Long> reservationsIds) {
+        this.reservationsIds = reservationsIds;
     }
 
 
@@ -103,7 +103,7 @@ public class UserDTO {
         private String password;
         private String email;
         private boolean isAdmin;
-        private List<Reservation> reservations;
+        private List<Long> reservationsIds;
 
 
         public Builder id(Long id) {
@@ -146,8 +146,8 @@ public class UserDTO {
             return this;
         }
 
-        public Builder reservations(List<Reservation> reservations) {
-            this.reservations = reservations;
+        public Builder reservationsIds(List<Long> reservationsIds) {
+            this.reservationsIds = reservationsIds;
             return this;
         }
 
@@ -162,7 +162,7 @@ public class UserDTO {
             userDTO.password = this.password;
             userDTO.address = this.address;
             userDTO.isAdmin = this.isAdmin;
-            userDTO.reservations = this.reservations;
+            userDTO.reservationsIds = this.reservationsIds;
 
             return userDTO;
         }
