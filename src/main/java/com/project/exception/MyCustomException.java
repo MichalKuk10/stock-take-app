@@ -1,7 +1,8 @@
 package com.project.exception;
 
-public class MyCustomException extends Exception{
+public class MyCustomException extends RuntimeException{
     public MyCustomException() {
-        super("");
+
+        super("This operations is not possible");
     }
 }

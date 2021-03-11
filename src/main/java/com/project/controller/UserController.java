@@ -3,6 +3,7 @@ package com.project.controller;
 
 import com.project.converter.UserDTOConverter;
 import com.project.model.User;
+import com.project.modelDTO.CarDTO;
 import com.project.modelDTO.UserDTO;
 import com.project.service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -36,6 +37,12 @@ public class UserController {
         return userDTOConverter.entitiesToDTO(userService.getAllUsers());
     }
 
+    @GetMapping("/{id}")
+    @ResponseBody
+    @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+    public UserDTO getUserById(@PathVariable("id") long id){
+        return userDTOConverter.convertEntityToDTO(userService.getUserById(id));
+    }
 
     @DeleteMapping("/{id}")
     @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
@@ -47,6 +54,7 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
+
     @PostMapping()
     @ResponseBody
     @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
@@ -55,5 +63,12 @@ public class UserController {
             userService.addUser(user);
             return ResponseEntity.status(CREATED).body("Account has been created.");
         }
+
+    @PutMapping
+    @ResponseBody
+    @ResponseStatus(OK)
+    public void updateUser(@RequestBody User user) {
+        userService.updateUser(user);
+    }
 }
 

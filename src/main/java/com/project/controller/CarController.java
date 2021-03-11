@@ -67,8 +67,8 @@ public class CarController {
     @ResponseBody
     @ResponseStatus(NO_CONTENT)
     @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
-    public ResponseEntity<Object> attemptToUpdateCar(@RequestBody CarDTO carDTO) {
-        carService.updateCar(carDTOConverter.convertDTOToCar(carDTO));
+    public ResponseEntity<Object> attemptToUpdateCar(@RequestBody Car car) {
+        carService.updateCar(car);
         return ResponseEntity.status(NO_CONTENT).body("Car details have been updated.");
     }
 

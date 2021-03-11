@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CarRepo extends JpaRepository<Car, Long> {
-    Car getItemById(long id);
+    Car getCarById(long id);
 }
