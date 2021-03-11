@@ -30,3 +30,6 @@ It has verry simple layout as for now. It's not the current stage to take care a
 ![Alt text](https://user-images.githubusercontent.com/57062670/110820167-25bcda80-828f-11eb-89be-427c2e7a246a.png)
 
 ![Alt text](https://user-images.githubusercontent.com/57062670/110820500-72081a80-828f-11eb-8942-204e75aab3b6.png)
+
+
+![Alt text](https://user-images.githubusercontent.com/57062670/110843364-7bea4780-82a8-11eb-888d-7f9185b2ec6f.png)
