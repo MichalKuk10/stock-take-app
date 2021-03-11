@@ -32,4 +32,4 @@ It has verry simple layout as for now. It's not the current stage to take care a
 ![Alt text](https://user-images.githubusercontent.com/57062670/110820500-72081a80-828f-11eb-8942-204e75aab3b6.png)
 
 
-![Alt text](https://user-images.githubusercontent.com/57062670/110843364-7bea4780-82a8-11eb-888d-7f9185b2ec6f.png)
+![Alt text](https://user-images.githubusercontent.com/57062670/110843464-9d4b3380-82a8-11eb-8677-98f3a3b61af3.png)
