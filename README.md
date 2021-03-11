@@ -3,7 +3,9 @@
 
 You can also do bulk updates of your inventory by searching for a product and manually entering the quantity.
 
-This is a pet project with:
+The aim of this project is to train Java and Spring. 
+
+## Technologies
 - Java,
 - Spring,
 - JPA,
