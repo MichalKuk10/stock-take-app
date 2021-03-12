@@ -60,8 +60,6 @@ class UserServiceTest {
     }
 
 
-
-
     private List<User> prepareMockData() {
         User appUser1 = new User.Builder()
                 .firstName("Joanna")
